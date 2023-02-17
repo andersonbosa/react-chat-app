@@ -14,6 +14,7 @@
     - add rule to database permission
     - add "message" as collection
 - [X] Google Sign-in
+- [X] send user message to Database
 
 [1]: https://www.freecodecamp.org/news/building-a-real-time-chat-app-with-reactjs-and-firebase/
 [2]: https://github.com/Timonwa
