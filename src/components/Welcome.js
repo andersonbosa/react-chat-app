@@ -1,9 +1,13 @@
-import React from "react";
-import GoogleSignin from "../assets/img/btn_google_signin_dark_pressed_web.png";
+import React from "react"
+import GoogleSignin from "../assets/img/btn_google_signin_dark_pressed_web.png"
+import { auth } from "../firebase"
+import { GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
 
 const Welcome = () => {
   const googleSignIn = () => {
-  };
+    const provider = new GoogleAuthProvider()
+    signInWithRedirect(auth, provider)
+  }
 
   return (
     <main className="welcome">
@@ -19,7 +23,7 @@ const Welcome = () => {
         />
       </button>
     </main>
-  );
-};
+  )
+}
 
-export default Welcome;
+export default Welcome
