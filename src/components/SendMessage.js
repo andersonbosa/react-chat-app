@@ -3,7 +3,7 @@ import { auth, db } from '../firebase'
 import { addDoc, collection, serverTimestamp } from "firebase/firestore"
 
 
-const SendMessage = () => {
+const SendMessage = ({ scroll }) => {
   const [message, setMessage] = useState('')
 
   const sendUserMessage = async (event) => {
@@ -27,6 +27,7 @@ const SendMessage = () => {
     )
 
     setMessage('')
+    scroll.current.scrollIntoView({ behavior: "smooth" })
   }
 
   return (

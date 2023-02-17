@@ -5,7 +5,7 @@ import {
   orderBy,
   query
 } from 'firebase/firestore'
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { db } from '../firebase'
 import Message from "./Message"
 import SendMessage from "./SendMessage"
@@ -13,7 +13,6 @@ import SendMessage from "./SendMessage"
 
 const ChatBox = () => {
   const [messages, setMessages] = useState([])
-
   useEffect(() => {
     const _query = query(
       collection(db, "messages"),
@@ -35,6 +34,8 @@ const ChatBox = () => {
     return () => unsubscribe
   })
 
+  const scroll = useRef()
+
   return (
     <main className="chat-box">
       <div className="messages-wrapper">
@@ -44,7 +45,8 @@ const ChatBox = () => {
           ))
         }
       </div>
-      <SendMessage />
+      <span ref={scroll}></span>
+      <SendMessage scroll={scroll} />
     </main>
   )
 }
