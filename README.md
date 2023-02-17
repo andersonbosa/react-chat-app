@@ -15,6 +15,7 @@
     - add "message" as collection
 - [X] Google Sign-in
 - [X] send user message to Database
+- [X] retrive user messages from database
 
 [1]: https://www.freecodecamp.org/news/building-a-real-time-chat-app-with-reactjs-and-firebase/
 [2]: https://github.com/Timonwa
