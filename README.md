@@ -17,6 +17,10 @@
 - [X] send user message to Database
 - [X] retrive user messages from database
 - [X] add behavior: scroll to the bottom when send message
+- [X] Deploy to Vercel
+  - [require allow Vercel domain on Firebase][3]
+
 
 [1]: https://www.freecodecamp.org/news/building-a-real-time-chat-app-with-reactjs-and-firebase/
 [2]: https://github.com/Timonwa
+[3]: https://stackoverflow.com/questions/48076968/firebase-auth-unauthorized-domain-domain-is-not-authorized
