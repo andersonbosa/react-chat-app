@@ -5,7 +5,6 @@
 ## Roadmap
 
 - [X] add gitignore to node.js
-- [X] add base folders: src, public
 - [X] add license
 - [X] use `npx create-react-app`
 
